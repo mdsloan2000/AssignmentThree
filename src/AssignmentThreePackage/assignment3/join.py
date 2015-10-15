@@ -27,24 +27,11 @@ def mapper(record):
 def reducer(key, list_of_values):
     # key: word
     # value: list of occurrence counts
-    #old_list = list_of_values
-    testkey = '32'
-    testorder = 'order' + ' 32' + ' Descripton for Order 32'
-    testline = str([u'line', u'32', u'Order 32 + Line1'])
-    test_list_of_values = []
-    test_list_of_values.append(testorder)
-    test_list_of_values.append(testline)
-    print test_list_of_values
-    print (key, list_of_values)
-    
-    #testkey = testorder[1]
-    #print(list_of_values)
-    #newkey = list_of_values[0]
-    #listlength = len(list_of_values)
-    #for x in range(1,listlength):
-    #for x in range(0,len(list_of_values)):
-    mr.emit((testkey, test_list_of_values))
-    #print str(rkey)
+    for v in list_of_values:
+        print key
+        print v
+        print "end"
+        #mr.emit((key, list_of_values[v]))
     #print key
     #print list_of_values
 
